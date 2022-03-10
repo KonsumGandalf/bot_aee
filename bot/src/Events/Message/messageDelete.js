@@ -10,7 +10,7 @@ const messageDeleteFunc = {
         if (deletedMessage.bot) return;
         
         const Log = new MessageEmbed()
-            .setColor("DARK_RED")
+            .setColor("RED")
             .setAuthor({ name: deletedMessage.author.tag, iconURL: deletedMessage.author.avatarURL({ dynamic: true, size: 512 }) })
             .setDescription(`📕 A [message](${deletedMessage.url}) by ${deletedMessage.author.tag} was **deleted** in ${deletedMessage.channel}\n
             **Deleted Message**: \n${deletedMessage.content ? deletedMessage.content : "None"}`.slice(0, 4096));

@@ -14,6 +14,15 @@ const client = new Client({ intents: 32767 });
 
 client.commands = new Collection();
 
+/**const schemasDir = `${process.cwd()}/src/Structures/Schemas`
+fs.readdirSync(schemasDir).map((file) => {
+    if (file.includes('.js')) {
+        require(`${schemasDir}/${file}`)(client);
+    }
+})*/
+
+require("../Systems/GiveAwaySystem")(client);
+
 const handlerDir = `${process.cwd()}/src/Handlers`
 fs.readdirSync(handlerDir).map((file) => {
     if (file.includes('.js')) {

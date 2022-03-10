@@ -6,13 +6,13 @@
     "extends": [
         "google"
     ],
-    "parser": "@typescript-eslint/parser",
+    "parser": "@javascript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module"
     },
     "plugins": [
-        "@typescript-eslint"
+        "@javascript-eslint"
     ],
     "rules": {
         "quotes" : "off",
